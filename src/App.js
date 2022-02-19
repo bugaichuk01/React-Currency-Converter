@@ -52,20 +52,24 @@ function App() {
     }
 
     return (
-        <div className='container mt-5 text-center'>
-            <h1 className='mb-3'>React currency converter </h1>
-            <Currency
-                onAmountChange={handleAmount1Change}
-                onCurrencyChange={handleCurrency1Change}
-                currencies={Object.keys(options)}
-                amount={amount1}
-                currency={currency1}/>
-            <Currency
-                onAmountChange={handleAmount2Change}
-                onCurrencyChange={handleCurrency2Change}
-                currencies={Object.keys(options)}
-                amount={amount2}
-                currency={currency2}/>
+        <div className='App container mt-5 text-center'>
+            {options && (
+                <>
+                    <h1 className='mb-3'>React currency converter </h1>
+                    <Currency
+                        onAmountChange={handleAmount1Change}
+                        onCurrencyChange={handleCurrency1Change}
+                        currencies={Object.keys(options)}
+                        amount={amount1}
+                        currency={currency1}/>
+                    <Currency
+                        onAmountChange={handleAmount2Change}
+                        onCurrencyChange={handleCurrency2Change}
+                        currencies={Object.keys(options)}
+                        amount={amount2}
+                        currency={currency2}/>
+                </>
+            )}
         </div>
     );
 }
