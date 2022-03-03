@@ -18,5 +18,4 @@ npm start
 - Choose currency type
 
 # Technical Notes
-- State management using React-Hooks
 - Environment set-up using Create-React-App
